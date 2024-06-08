@@ -35,14 +35,10 @@ Designed to validate & process cookies, validate them and store the results in e
 
 ## Usage
 
-1. Place your cookie files in the `Data` directory.
+1. Place your cookies in the `Data` directory.
 
 2. Run the script:
 
     ```sh
     python master.py
     ```
-
-## Author
-
-- GitHub: [@hatedamon](https://github.com/hatedamon)
