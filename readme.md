@@ -1,6 +1,6 @@
-# Cookie Validator
+# Cookie Validator + Database for mass cookie storage
 
-Designed to validate & process cookies, validate them and store the results in either text files or a SQL db.
+Designed to validate & process cookies, validate them and store the results in either text files or a SQL db, Can be used for large amounts of cookies, quickly.
 
 ## Features
 
@@ -40,7 +40,7 @@ Designed to validate & process cookies, validate them and store the results in e
 2. Run the script:
 
     ```sh
-    python script.py
+    python master.py
     ```
 
 ## Author
