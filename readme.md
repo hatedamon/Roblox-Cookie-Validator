@@ -1,5 +1,48 @@
-Make sure your cookies are located in the right place (Data/Secure)
-Paste your cookies in a .txt file with.
-The program automatically splits the cookies, make sure theres a new cookie on each line though.
-Make sure the cookies are in your region, unless you are using proxies. If they aren't this will destroy their sessions.
-Validated and dead cookies will be processed into the DIST folder.
+# Cookie Validator
+
+Designed to validate & process cookies, validate them and store the results in either text files or a SQL db.
+
+## Features
+
+- **Cookie Validation**: Validate cookies
+- **Data Collection**: Data collection on cookies (RobuxBalance, UserID, Username, DisplayName, IsPremium?)
+- **Database Integration**: Option to save valid cookie information into a SQL db
+
+## Requirements
+
+- Python 3.0+
+- `requests` library
+- `colorama` library
+- `sqlite3` (built-in with Python)
+- Properly formatted cookies in a text file, one per line
+
+## Installation
+
+1. Clone the repository:
+
+    ```sh
+    git clone https://github.com/hatedamon/cookie-validator.git
+    cd cookie-validator
+    ```
+
+2. Install the required Python libraries:
+
+    ```sh
+    pip install requests colorama
+    ```
+
+3. Make sure your cookies are located in the correct directory (`Data`) n are formatted correctly in `.txt` files (one cookie per line).
+
+## Usage
+
+1. Place your cookie files in the `Data` directory.
+
+2. Run the script:
+
+    ```sh
+    python script.py
+    ```
+
+## Author
+
+- GitHub: [@hatedamon](https://github.com/hatedamon)
