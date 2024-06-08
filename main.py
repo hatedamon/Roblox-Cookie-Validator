@@ -38,11 +38,11 @@ def configure_logging():
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
 
-    # Remove all handlers associated with the root logger object
+    # remove handlers
     for handler in logger.handlers[:]:
         logger.removeHandler(handler)
 
-    # Add our custom handler
+    # custom handler
     handler = ColorHandler()
     formatter = logging.Formatter('%(message)s')
     handler.setFormatter(formatter)
@@ -51,15 +51,11 @@ def configure_logging():
 def main():
     configure_logging()
     logger = logging.getLogger()
-
     print(Fore.CYAN + A)
-    
     save_to_db = prompt_for_db_usage()
-
     setup_directories()
     if save_to_db:
         setup_database()
-
     files = list(Path(IDIR).glob("*.txt"))
     tf = len(files)
     logger.info(f"num found: {tf}")
@@ -67,7 +63,6 @@ def main():
         logger.info(f"processing file {idx}/{tf}: {file.name}")
         process(file, save_to_db)
         logger.info(f"processed {idx}/{tf}")
-
     logger.info(f"all files processed")
 
 def prompt_for_db_usage():
@@ -76,7 +71,7 @@ def prompt_for_db_usage():
         if user_input in ['yes', 'no']:
             return user_input == 'yes'
         else:
-            print("Invalid input. Please enter 'yes' or 'no'.")
+            print("god you're retarded...")
 
 def setup_directories():
     os.makedirs(ODIR, exist_ok=True)
