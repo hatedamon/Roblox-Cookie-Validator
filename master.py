@@ -135,7 +135,7 @@ def save_to_db_func(cookie, user_data):
     logger = logging.getLogger()
     location_response = requests.get("https://auth.roblox.com/v1/auth/metadata", cookies={".ROBLOSECURITY": cookie})
     if location_response.status_code == 200:
-        location = location_response.headers.get("x-roblox-region", "Unknown")
+        location = location_response.headers.get("x-roblox-edge", "Unknown")
     else:
         location = "Unknown"
 
